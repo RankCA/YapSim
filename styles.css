@@ -1,0 +1,351 @@
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap');
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000022;
+  background-image:
+    radial-gradient(ellipse at 20% 50%, #001a3a 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 20%, #001a2a 0%, transparent 50%);
+  color: cyan;
+  font-family: 'Comic Neue', 'Comic Sans MS', cursive;
+  min-height: 100vh;
+}
+
+/* ===== TOP MARQUEE ===== */
+#top-marquee {
+  background-color: aqua;
+  color: black;
+  font-weight: bold;
+  font-size: 13px;
+  padding: 5px 0;
+  border-bottom: 3px dashed yellow;
+}
+
+/* ===== LAYOUT ===== */
+#layout {
+  display: flex;
+  min-height: calc(100vh - 80px);
+}
+
+/* ===== LEFT PANEL ===== */
+#left-panel {
+  width: 340px;
+  min-width: 280px;
+  padding: 20px;
+  border-right: 3px dashed aqua;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  background: #000033;
+}
+
+h1 {
+  font-size: 2.2em;
+  color: aqua;
+  text-shadow: 3px 3px 0 magenta, 6px 6px 0 yellow;
+  margin: 0;
+  letter-spacing: 2px;
+}
+
+#visitor-counter {
+  font-size: 11px;
+  color: lime;
+  background: #001100;
+  border: 1px solid lime;
+  padding: 2px 8px;
+}
+
+/* ===== STAT BOX ===== */
+#stat-box {
+  background: #00001a;
+  border: 2px solid aqua;
+  box-shadow: 0 0 12px aqua;
+  padding: 12px 24px;
+  width: 100%;
+  text-align: left;
+}
+
+.stat-row {
+  font-size: 1.05em;
+  padding: 3px 0;
+  border-bottom: 1px dotted #004466;
+  color: cyan;
+}
+
+.stat-row b {
+  color: yellow;
+}
+
+.stat-row.dim {
+  font-size: 0.85em;
+  color: #559999;
+}
+
+/* ===== YAP BUTTON ===== */
+#yap-btn {
+  background: aqua;
+  border: 4px outset cyan;
+  border-radius: 10px;
+  padding: 22px 44px;
+  font-size: 1.5rem;
+  font-family: 'Comic Neue', 'Comic Sans MS', cursive;
+  font-weight: bold;
+  color: black;
+  cursor: pointer;
+  box-shadow: 5px 5px 0 magenta, 10px 10px 0 yellow;
+  transition: transform 0.07s, box-shadow 0.07s;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  width: 100%;
+}
+
+#yap-btn:hover {
+  background: yellow;
+  box-shadow: 5px 5px 0 lime;
+}
+
+#yap-btn:active {
+  border-style: inset;
+  box-shadow: none;
+  transform: translate(5px, 5px);
+  transition: none;
+}
+
+/* ===== NEWS TICKER ===== */
+#news-ticker-wrap {
+  font-size: 11px;
+  color: #aaffff;
+  background: #000011;
+  border: 1px dashed #006666;
+  padding: 6px 10px;
+  width: 100%;
+  min-height: 40px;
+}
+
+/* ===== BOTTOM BUTTONS ===== */
+#bottom-btns {
+  width: 100%;
+  display: flex;
+  gap: 8px;
+}
+
+#settingsButton {
+  flex: 1;
+  background: #333;
+  color: cyan;
+  font-family: 'Comic Neue', 'Comic Sans MS', cursive;
+  font-weight: bold;
+  padding: 10px;
+  border: 2px outset #555;
+  cursor: pointer;
+  font-size: 0.95em;
+}
+
+#settingsButton:hover { background: aqua; color: black; }
+#settingsButton:active { border-style: inset; }
+
+/* ===== RIGHT PANEL / SHOP ===== */
+#right-panel {
+  flex: 1;
+  padding: 16px 20px;
+  overflow-y: auto;
+  background: #00001e;
+}
+
+#right-panel h2 {
+  font-size: 1.8em;
+  color: aqua;
+  text-shadow: 2px 2px magenta;
+  margin: 0 0 4px 0;
+  border-bottom: 2px dashed aqua;
+  padding-bottom: 8px;
+}
+
+#shop-subtitle {
+  font-size: 11px;
+  color: #559999;
+  margin: 0 0 12px 0;
+}
+
+.shop-section-header {
+  background: #003344;
+  color: yellow;
+  font-weight: bold;
+  font-size: 0.85em;
+  padding: 4px 10px;
+  margin: 10px 0 4px 0;
+  border-left: 4px solid aqua;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ===== SHOP ITEM ===== */
+.shop-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  margin-bottom: 4px;
+  border: 2px outset #004455;
+  background: #000033;
+  cursor: pointer;
+  transition: background 0.1s, border-color 0.1s;
+  user-select: none;
+}
+
+.shop-item:hover {
+  background: #001144;
+  border-color: aqua;
+}
+
+.shop-item:active {
+  border-style: inset;
+  background: #002255;
+}
+
+.shop-item.can-afford {
+  border-color: #00aaaa;
+}
+
+.shop-item.cant-buy {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.shop-item.cant-afford {
+  background: #330000 !important;
+  border-color: red !important;
+  animation: shake 0.3s ease;
+}
+
+@keyframes shake {
+  0%   { transform: translateX(0); }
+  25%  { transform: translateX(-5px); }
+  50%  { transform: translateX(5px); }
+  75%  { transform: translateX(-3px); }
+  100% { transform: translateX(0); }
+}
+
+.item-emoji {
+  font-size: 1.6em;
+  min-width: 36px;
+  text-align: center;
+}
+
+.item-info {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.item-name {
+  font-weight: bold;
+  color: cyan;
+  font-size: 0.95em;
+}
+
+.item-desc {
+  font-size: 0.75em;
+  color: #66bbbb;
+}
+
+.item-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2px;
+}
+
+.item-cost {
+  color: yellow;
+  font-size: 0.85em;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+.item-count {
+  color: lime;
+  font-size: 0.7em;
+}
+
+/* ===== FLOATING +N ===== */
+.floaty {
+  position: absolute;
+  pointer-events: none;
+  color: yellow;
+  font-family: 'Comic Neue', 'Comic Sans MS', cursive;
+  font-weight: bold;
+  font-size: 1.3em;
+  text-shadow: 1px 1px magenta;
+  animation: floatup 0.9s ease-out forwards;
+  z-index: 9999;
+}
+
+@keyframes floatup {
+  0%   { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-60px); }
+}
+
+/* ===== MODAL ===== */
+dialog {
+  background: #000044;
+  color: cyan;
+  border: 4px solid aqua;
+  font-family: 'Comic Neue', 'Comic Sans MS', cursive;
+  box-shadow: 0 0 40px aqua;
+  padding: 24px;
+  min-width: 300px;
+}
+
+dialog h3 {
+  color: yellow;
+  text-shadow: 1px 1px magenta;
+  margin-top: 0;
+}
+
+.modal-close {
+  float: right;
+  background: red;
+  color: white;
+  font-family: 'Comic Neue', 'Comic Sans MS', cursive;
+  font-weight: bold;
+  border: 2px outset darkred;
+  padding: 4px 10px;
+  cursor: pointer;
+}
+
+.modal-close:hover { background: #ff5555; }
+
+#clear {
+  background: darkred;
+  color: white;
+  font-family: 'Comic Neue', 'Comic Sans MS', cursive;
+  font-weight: bold;
+  border: 2px outset red;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 1em;
+  margin-top: 10px;
+  display: block;
+}
+
+#clear:hover { background: red; }
+
+/* ===== FOOTER ===== */
+#footer {
+  border-top: 2px dashed aqua;
+  padding: 4px 0;
+  font-size: 11px;
+  color: #336666;
+  background: #000011;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 600px) {
+  #layout { flex-direction: column; }
+  #left-panel { width: 100%; border-right: none; border-bottom: 3px dashed aqua; }
+}

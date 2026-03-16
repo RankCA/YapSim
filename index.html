@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Yap Sim</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+
+    <marquee scrollamount="4" id="top-marquee"><b>🌀 WELCOME TO YAP SIM v2.0 !!! THE GREATEST YAPPING GAME EVER MADE !!! YAP YAP YAP !!! CAN YOU BECOME THE ULTIMATE YAPPER ???</b></marquee>
+
+    <div id="layout">
+
+      <!-- LEFT: clicker -->
+      <div id="left-panel">
+        <h1>💬 Yap Sim</h1>
+        <div id="visitor-counter">Yappers Online: <span id="fake-visitors">312</span></div>
+
+        <div id="stat-box">
+          <div class="stat-row">Yaps: <b><span id="YapsDisplay">0</span></b></div>
+          <div class="stat-row dim">Lifetime: <span id="lifetime-yaps">0</span></div>
+          <div class="stat-row">Yaps/Click: <b><span id="YpCDisplay">1</span></b></div>
+          <div class="stat-row">Yaps/Sec: <b><span id="YpSDisplay">0</span></b></div>
+        </div>
+
+        <button id="yap-btn">💬 YAP 💬</button>
+
+        <div id="news-ticker-wrap">
+          <b>📰 NEWS:</b> <span id="news-ticker">Loading latest yap news...</span>
+        </div>
+
+        <div id="bottom-btns">
+          <button id="settingsButton">⚙ Settings</button>
+        </div>
+      </div>
+
+      <!-- RIGHT: shop always visible -->
+      <div id="right-panel">
+        <h2>🛒 The Yap Shop</h2>
+        <p id="shop-subtitle">click to buy upgrades!!!!</p>
+        <div id="shop-items">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Settings Modal -->
+    <dialog id="settingsModal">
+      <button id="closeSettings" class="modal-close">✖ Close</button>
+      <h3>⚙ Settings</h3>
+      <p>Warning!! Clearing is PERMANENT and cannot be undone!!</p>
+      <button id="clear">⚠ CLEAR ALL DATA</button>
+    </dialog>
+
+    <div id="footer">
+      <marquee scrollamount="2" direction="right">© 2025 YapSim Industries LLC • Not responsible for excessive yapping • Best viewed in Internet Explorer 6 at 800x600 • This site uses cookies (and yaps) • NO REFUNDS</marquee>
+    </div>
+
+  </body>
+</html>
