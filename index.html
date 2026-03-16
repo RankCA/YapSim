@@ -2,7 +2,6 @@
 <html lang="en">
   <head>
     <title>Yap Sim</title>
-    <link rel="icon" type="image/x-icon" href="yap.png">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
@@ -10,24 +9,35 @@
   </head>
 
   <body>
+    <marquee><b>WELCOME TO YAP SIM!!! THE #1 YAPPING SIMULATOR ON THE WEB!!! YAP YAP YAP!!!</b></marquee>
+
     <div id="main">
-      <h1>Yap Sim alpha</h1>
-      <h3>Click the button to Yap</h3>
+      <h1>&#x1F4AC; Yap Sim <blink>alpha</blink></h1>
+      <h3>Click the button to Yap!!!!</h3>
       <h2>Yaps: <span id="YapsDisplay">0</span></h2>
-      <button id="yap-btn">Yap</button>
-      <h3>Yaps per Click: <span id="YpCDisplay">1</span></h3>
-      <h3>Yaps per Second: <span id="YpSDisplay">0</span></h3>
+      <h4>Lifetime Yaps: <span id="lifetime-yaps">0</span></h4>
+      <button id="yap-btn">&#x1F4AC; YAP &#x1F4AC;</button>
+      <br><br>
+      <table id="stats-table" border="1" cellpadding="5" cellspacing="0">
+        <tr><th>Stat</th><th>Value</th></tr>
+        <tr><td>Yaps per Click</td><td><span id="YpCDisplay">1</span></td></tr>
+        <tr><td>Yaps per Second</td><td><span id="YpSDisplay">0</span></td></tr>
+      </table>
     </div>
-    
-    <hr>
-    <button id="settingsButton">Settings</button>
-    <button id="shopButton">Shop</button>
-    
+
+    <hr noshade color="aqua">
+
+    <p style="font-size:10px; color: gray;">Best viewed in Internet Explorer 6.0 at 800x600 resolution</p>
+
+    <button id="settingsButton">&#x2699; Settings</button>
+    &nbsp;
+    <button id="shopButton">&#x1F6D2; Shop</button>
+
     <dialog id="shopModal">
-      <button id="closeShop">Close</button>
-      <h2>Shop</h2>
-      <h3>Buy Upgrades</h3>
-      <table id="upgrades">
+      <button id="closeShop">X Close</button>
+      <h2>&#x1F6D2; The Yap Shop</h2>
+      <h3>Buy Upgrades with your Yaps!!</h3>
+      <table id="upgrades" border="2" cellpadding="6" cellspacing="0">
         <tr>
           <th>Name</th>
           <th>Description</th>
@@ -36,15 +46,26 @@
         <tr>
           <td>Getting Started</td>
           <td>+1 Yaps/Click</td>
-          <td> <button id="upgrade1">50 Yaps</button> </td>
+          <td><button id="upgrade1">Buy (50 Yaps)</button></td>
+        </tr>
+        <tr>
+          <td>Auto-Yapper 3000</td>
+          <td>+1 Yap/Second</td>
+          <td><button id="upgrade2">Buy (100 Yaps)</button></td>
         </tr>
       </table>
     </dialog>
-    
+
     <dialog id="settingsModal">
-      <button id="closeSettings">Close</button>
-      <button id="clear">Clear</button>
+      <button id="closeSettings">X Close</button>
+      <h3>Settings</h3>
+      <p>Are you sure you want to clear?? This cannot be undone!!</p>
+      <button id="clear">&#x26A0; CLEAR ALL DATA</button>
     </dialog>
-    
+
+    <hr noshade color="aqua">
+    <p style="font-size:9px;">&#169; 2025 YapSim Inc. All Rights Reserved. Do not steal my code.</p>
+    <p style="font-size:9px;">This site is <img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Google-Chrome-icon.png" width="12"> Chrome compatible!</p>
+
   </body>
 </html>

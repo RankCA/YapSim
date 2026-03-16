@@ -6,18 +6,18 @@ let YpS = Number(localStorage.getItem("YpS")) || 0;
 
 // Define Elements
 const yapsDisplay = document.getElementById("YapsDisplay");
-const lifetimeYapsDisplay = document.getElementById("lifetime-yaps");
+const lifetimeYapsDisplay = document.getElementById("lifetime-yaps"); // FIX: this element now exists in HTML
 const YpCDisplay = document.getElementById("YpCDisplay");
 const YpSDisplay = document.getElementById("YpSDisplay");
 const yapButton = document.getElementById("yap-btn");
 
-const settingsButton = document.getElementById("settingsButton")
-const settingsModal = document.getElementById("settingsModal")
-const shopButton = document.getElementById("shopButton")
-const shopModal = document.getElementById("shopModal")
-const closeSettingsButton = document.getElementById("closeSettings")
-const clearYapsButton = document.getElementById("clear")
-const closeShopButton = document.getElementById("closeShop")
+const settingsButton = document.getElementById("settingsButton");
+const settingsModal = document.getElementById("settingsModal");
+const shopButton = document.getElementById("shopButton");
+const shopModal = document.getElementById("shopModal");
+const closeSettingsButton = document.getElementById("closeSettings");
+const clearYapsButton = document.getElementById("clear");
+const closeShopButton = document.getElementById("closeShop");
 
 // Functions
 function save() {
@@ -43,40 +43,54 @@ yapButton.onclick = () => {
 };
 
 clearYapsButton.onclick = () => {
-  yaps = 0;
-  lifetimeYaps = 0;
-  YpC = 1;
-  YpS = 0;
-  save();
-  updateUI();
-}
+    yaps = 0;
+    lifetimeYaps = 0;
+    YpC = 1;
+    YpS = 0;
+    save();
+    updateUI();
+    settingsModal.close();
+};
 
 settingsButton.onclick = () => {
-  settingsModal.show();
-}
+    settingsModal.show();
+};
 
 closeSettingsButton.onclick = () => {
-  settingsModal.close();
-}
+    settingsModal.close();
+};
 
 shopButton.onclick = () => {
-  shopModal.show();
-}
+    shopModal.show();
+};
 
 closeShopButton.onclick = () => {
-  shopModal.close();
-}
+    shopModal.close();
+};
 
 // --- SHOP ---
 
 document.getElementById("upgrade1").onclick = () => {
-  if (yaps >= 50) {
-    yaps -= 50;
-    YpC = YpC + 1;
-    updateUI();
-    save();
-}}
+    if (yaps >= 50) {
+        yaps -= 50;
+        YpC += 1;
+        updateUI();
+        save();
+    } else {
+        alert("Not enough Yaps!! Keep yapping!!");
+    }
+};
 
+document.getElementById("upgrade2").onclick = () => {
+    if (yaps >= 100) {
+        yaps -= 100;
+        YpS += 1;
+        updateUI();
+        save();
+    } else {
+        alert("Not enough Yaps!! Keep yapping!!");
+    }
+};
 
 // Tick Function
 setInterval(() => {
@@ -85,7 +99,7 @@ setInterval(() => {
         lifetimeYaps += YpS;
         save();
         updateUI();
-    } 
+    }
 }, 1000);
 
 // Run on boot
