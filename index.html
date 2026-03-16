@@ -5,15 +5,46 @@
     <link rel="icon" type="image/x-icon" href="yap.png">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css" />
-    <script defer src="js/script.js"></script>
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="script.js"></script>
   </head>
 
   <body>
-    <h1>Yap Sim alpha</h1>
-    <h3>Click the button to Yap</h3>
-    <h2>Yaps: <span id="points-count">0</span></h2>
-    <button id="yap-btn">Yap</button>
+    <div id="main">
+      <h1>Yap Sim alpha</h1>
+      <h3>Click the button to Yap</h3>
+      <h2>Yaps: <span id="YapsDisplay">0</span></h2>
+      <button id="yap-btn">Yap</button>
+      <h3>Yaps per Click: <span id="YpCDisplay">1</span></h3>
+      <h3>Yaps per Second: <span id="YpSDisplay">0</span></h3>
+    </div>
+    
+    <hr>
+    <button id="settingsButton">Settings</button>
+    <button id="shopButton">Shop</button>
+    
+    <dialog id="shopModal">
+      <button id="closeShop">Close</button>
+      <h2>Shop</h2>
+      <h3>Buy Upgrades</h3>
+      <table id="upgrades">
+        <tr>
+          <th>Name</th>
+          <th>Description</th>
+          <th>Cost</th>
+        </tr>
+        <tr>
+          <td>Getting Started</td>
+          <td>+1 Yaps/Click</td>
+          <td> <button id="upgrade1">50 Yaps</button> </td>
+        </tr>
+      </table>
+    </dialog>
+    
+    <dialog id="settingsModal">
+      <button id="closeSettings">Close</button>
+      <button id="clear">Clear</button>
+    </dialog>
     
   </body>
 </html>

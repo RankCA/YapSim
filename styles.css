@@ -1,0 +1,104 @@
+body{
+    text-align: center;
+    background-color: antiquewhite;
+    border-color: aqua;
+}
+
+#shop{
+  align-content: center;
+  text-align: center;
+}
+
+#upgrades{
+  text-align: center;
+  align-content: center;
+}
+
+#yap-btn {
+    background-color: aqua;
+    border-radius: 80px;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    color: white;
+    transition-duration: 0.2s;
+}
+
+
+#yap-btn:hover {
+  background-color: #CCCCCC; 
+  color: white;
+}
+
+#yap-btn:active{
+  background-color: #FFFFFF;
+  color: black;
+  font-weight: bold;
+  transition-duration: 0.001s;
+  padding: 20px 45px;
+}
+
+#settingsButton {
+  background-color: #8f8f8f;
+  font-weight: bold;
+  padding: 20px 10px;
+  transition-duration: 0.05s;
+}
+
+#settingsButton:hover{
+  background-color: aqua;
+}
+
+#settingsButton:active{
+  background-color: #FFFFFF;
+}
+
+#shopButton {
+  background-color: #79ba3f;
+  font-weight: bold;
+  padding: 20px 10px;
+  transition-duration: 0.05s;
+}
+
+#shopButton:hover {
+  background-color: aqua;
+}
+
+#shopButton:active {
+  background-color: #FFFFFF;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
